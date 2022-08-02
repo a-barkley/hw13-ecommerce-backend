@@ -65,10 +65,9 @@ router.delete('/:id', async (req, res) => {
     return;
   }
   res.status(200).res.json(deletedCategory);
-} catch (err) {
-  res.status(500).json(err);
-}
-
+  } catch (err) {
+    res.status(500).json(err);
+  }
 });
 
 module.exports = router;
